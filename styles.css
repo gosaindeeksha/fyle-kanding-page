@@ -1,0 +1,484 @@
+/* General CSS */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    overflow-x: hidden;
+}
+.btn {
+    background-color: #FF3147;
+    color: white;
+    padding: 2%;
+    font: normal normal 600 clamp(10px, 1vw + 0.5rem, 14px)/clamp(20px, 2vw + 0.5rem, 26px) Poppins;
+    letter-spacing: 1.4px;
+    border-radius: 0% !important;
+    text-transform: uppercase;
+}
+input[type="checkbox"] {
+    border-color:#FF3366 !important;
+    border-width: 2px; 
+    box-shadow: none !important;/* Change border color when checked */
+  }
+  a{
+    text-decoration: none;
+    color: #FF3147;
+  }
+/* Custom styles for checkbox */
+.form-check-input:checked{
+    background-color: #FF3366 !important;
+}
+span{
+    color: #FF3147;
+    font-weight: 600;
+   
+    letter-spacing: 0px;
+}
+h1{
+    text-align: left;
+    font-weight: bold;
+    letter-spacing: 0px;
+    text-transform: uppercase;
+}
+p{
+    font-weight: normal;
+    font-size: clamp(10px, 1vw + 0.5rem, 16px) !important;
+    line-height: clamp(20px, 2vw + 1rem, 30px);
+
+    
+    
+    
+    letter-spacing: 0px;
+}
+/* HERO SECTION CSS */
+#hero{
+    padding: 5%;
+    padding-left: 13%;
+    padding-right: 13%;
+    height: 100vh;
+    
+}
+#hero span {
+    font-size: clamp(20px, 2vw + 1rem, 30px);
+    line-height: clamp(70px, 8vw + 1rem, 110px);
+}
+
+#hero h1 {
+   
+font-size: clamp(30px, 2vw + 1rem, 55px);
+line-height: clamp(50px, 5vw + 1rem, 80px);
+
+}
+
+
+.home-img {
+    width: auto;
+    height: 85%;
+
+}
+/* FORM CSS */
+#contactForm .modal-content{
+    padding:10% 3%;
+}
+.modal{
+    border-radius: 0 !important;
+}
+ .modal-content .btn{
+    border-radius: 6px !important;
+}
+
+input.form-control{
+    border-top: none !important;
+    border-left: none !important;
+    border-right: none !important;
+    border-radius: 0%;
+   
+}
+label{
+    color: #6F718F99;
+}
+#contactForm .btn{
+    background-color: #FF3366 !important;
+}
+
+/* WHAT WE DO  CSS */
+#whatwedo span{
+    font-size: clamp(14px, 2vw + 1rem, 24px);
+    line-height: clamp(50px, 8vw + 1rem, 70px);
+}
+#whatwedo{
+    padding: 5%;
+    padding-left: 13%;
+    padding-right: 13%;
+}
+.cardcontainer{
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: calc(100%/3);
+    overflow-x: auto;
+    overscroll-behavior-inline: contain;
+    scroll-snap-type: inline mandatory;
+    -ms-overflow-style: none; /* for Internet Explorer, Edge */
+  scrollbar-width: none; /* for Firefox */
+
+}
+.cardcontainer::-webkit-scrollbar {
+    display: none; /* for Chrome, Safari, and Opera */
+  }
+#whatwedo .card{
+    margin: 4%;
+    border: none;
+    scroll-snap-align: start;
+}
+.card-img-overlay{
+   opacity: 0;
+   background-color: #FF3147;
+   padding-top: 30%;
+   padding-bottom: 30%;
+}
+.card:hover .card-img-overlay{
+   opacity: 1;
+   animation: slide-in 0.5s ;
+}
+@keyframes slide-in {
+    0%{
+        transform: translateY(-100%) ;
+    }
+    100%{
+        transform: translateY(0) ;
+    }
+}
+.indi{
+    background-image: url("Assets/2@2x.png");
+    background-size: cover;
+    height: 8px;
+    width: 8px;
+    margin: 1svh;
+    
+}
+.indi.active{
+    background-image: url("Assets/1@2x.png");
+    background-size: cover;
+    height: 30px;
+    width: 30px;
+}
+.card-img-overlay .btn{
+    background-color: white;
+    color: #FF3147;
+    padding: 3%;
+}
+.card-img-overlay .btn:hover {
+    box-shadow: 3px 3px 3px 2px rgba(0, 0,0, 0.5);
+}
+.card-img-overlay .btn:hover img{
+transform: translateX(3px);
+   
+}
+/* WHYC CHOOSE US */
+#whychooseus{
+    padding: 5%;
+    padding-left: 13%;
+    padding-right: 13%;
+}
+#whychooseus span{
+    font-size: clamp(14px, 2vw + 1rem, 24px);
+    line-height: clamp(50px, 8vw + 1rem, 70px);
+}
+#whychooseus img{
+    height: 70px;
+    width: auto;
+}
+#whychooseus .card{
+    border: none;
+    background-color: white;
+}
+#whychooseus .card-body{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+#whychooseus .card-body h6{
+margin-top: 7%;
+padding-bottom: 7%;
+font-weight: 700;
+}
+#whychooseus .card-body p{
+    text-align: left;
+}
+/* OUR PROJECTS */
+#ourprojects{
+    padding: 5%;
+    padding-left: 13%;
+    padding-right: 13%;
+}
+#ourprojects span{
+    font-size: clamp(14px, 2vw + 1rem, 24px);
+    line-height: clamp(50px, 8vw + 1rem, 70px);
+}
+.about-photos>*{
+    pointer-events: none;
+    text-align: left;
+}
+.about-photos{
+    background-color: #f6f6f6;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 6.3%;
+    
+ 
+}
+#ourprojects .col-4{
+    scale: 0.96;
+}
+.about-photos.active{
+    background-color: #FF3147;
+    color: #f6f6f6;
+}
+
+#changingimg{
+    width: 100%;
+}
+/* COMPANY GROWTH */
+
+#companygrowth{
+    padding: 5%;
+    padding-left: 13%;
+    padding-right: 13%;
+    background-color: #fafafa;
+}
+#companygrowth span{
+    font-size: clamp(14px, 2vw + 1rem, 24px);
+    line-height: clamp(50px, 8vw + 1rem, 70px);
+}
+.stats{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 5%;
+ }
+.stats:hover{
+    box-shadow: 2px 2px 5px 5px rgba(0, 0,0, 0.2);
+}
+ .stats img{
+     width: 5dvh;
+     margin-bottom: 10%;
+ }
+/* DEEFBACKS SECTION */
+#feedback{
+    padding: 5%;
+    padding-left: 13%;
+    padding-right: 13%;
+}
+#feedback>.text-center>span{
+    font-size: clamp(14px, 2vw + 1rem, 24px);
+    line-height: clamp(50px, 8vw + 1rem, 70px);
+}
+.feed-parent{
+    margin: 5%;
+    margin-top: 2%;
+    padding-left: 18%;
+    padding-right: 12%;
+    text-align: left;
+}
+.feed-parent h6{
+  line-height: 34px;
+}
+#special-h{
+    color: #FF3147;
+}
+#special-span{
+    color: black;
+}
+.feed-parent img{
+    position: relative;
+    z-index: -1;
+  top: 30px;
+}
+/* FOOTER */
+footer{
+    background-color: #FF3147;
+    padding: 5%;
+    padding-left: 13%;
+    padding-right: 13%;
+}
+footer img{
+    width: 100%;
+}
+@media only screen and (max-width: 1025px) {
+    .card-img-overlay{
+        padding-top: 10%;
+        padding-bottom: 10%;
+       
+    }
+    .card-img-overlay>div{
+        scale: 0.9;
+    }
+    #whychooseus .card-body img{
+        scale: 0.9;
+    }
+    #whychooseus{
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+    #whychooseus h6{
+        font-size: 1rem;
+
+    }
+    #whychooseus p{
+        font-size: 0.5rem;
+    }
+
+    #ourprojects .col-4{
+        scale: 0.65;
+    }
+   
+  }
+  @media only screen and (max-width: 769px) {
+
+    .cardcontainer{
+        grid-auto-columns: calc(100%/2);
+    }
+   
+    .cardcontain{
+        flex-wrap: wrap;
+    }
+  }
+  @media only screen and (max-width: 426px) {
+    #hero .col-sm-5{
+        visibility: hidden;
+        position: absolute;
+    }
+  
+
+    .cardcontainer{
+        grid-auto-columns: calc(100%/1);
+    }
+   
+    .cardcontain{
+        flex-wrap: wrap;
+    }
+  }
+  /* Animations */
+
+  #hero .col-sm-5{
+    animation: slide-outright linear,dissappear linear;
+    animation-timeline: view() ;
+    animation-range: exit -10% ;
+   
+    
+  }
+  #hero .col-sm-7{
+    animation: slide-outleft linear,dissappear linear;
+    animation-timeline: view() ;
+    animation-range: exit -10% ;
+    
+  }
+  #whatwedo{
+    animation:appear linear;
+    animation-timeline: view() ;
+    animation-range: entry 0% ;
+  }
+  #whatwedo>.container{
+    animation: slide-outright linear,dissappear linear;
+    animation-timeline: view() ;
+    animation-range: exit 10%;
+  }
+  #cardcarousel{
+    animation: slide-outleft linear,dissappear linear;
+    animation-timeline: view() ;
+    animation-range: exit -10%;
+  }
+  .carindicator{
+    animation: slide-outleft linear,dissappear linear;
+    animation-timeline: view() ;
+    animation-range: exit -1000%;
+  }
+  #whychooseus{
+    animation:appear linear;
+    animation-timeline: view() ;
+    animation-range: entry 0% cover 40% ;
+  }
+
+  #whychooseus>div:nth-child(1){
+    animation: slide-outright linear,dissappear linear;
+    animation-timeline: view() ;
+    animation-range: exit 10%;
+  }
+  #whychooseus .cardcontain{
+    animation: slide-outleft linear,dissappear linear;
+    animation-timeline: view() ;
+    animation-range: exit -10%;
+  }
+  #ourprojects{
+    animation:appear linear;
+    animation-timeline: view() ;
+    animation-range: entry 0% cover 40% ;
+  }
+  #ourprojects>div:nth-child(1){
+    animation: slide-outright linear,dissappear linear;
+    animation-timeline: view() ;
+    animation-range: exit 10%;
+  }
+  #ourprojects>div:nth-child(2){
+    animation: slide-outleft linear,dissappear linear;
+    animation-timeline: view() ;
+    animation-range: exit -10%;
+  }
+#companygrowth{
+    animation:appear linear;
+    animation-timeline: view() ;
+    animation-range: entry 0% cover 40% ;
+}
+#companygrowth>div:nth-child(1){
+    animation:slide-outright linear,dissappear linear;
+    animation-timeline: view() ;
+    animation-range: exit -10%;
+}
+.stats{
+    animation: slide-outleft linear,dissappear linear;
+    animation-timeline: view() ;
+    animation-range: exit -10%;
+}
+
+
+  @keyframes dissappear {
+    0%{
+        opacity: 1;
+    }
+    100%{
+        opacity:0;
+    }
+  }
+  @keyframes slide-outleft {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        
+        transform: translateX(-200%);
+    }
+}
+
+@keyframes slide-outright {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        
+        transform: translateX(200%);
+    }
+}
+
+@keyframes appear {
+    0%{
+        opacity: 0.5;
+        scale: 0;
+    }
+    100%{
+        opacity: 1;
+        scale: 1;
+    }
+}
